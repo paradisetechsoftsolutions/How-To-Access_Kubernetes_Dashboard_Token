@@ -11,7 +11,7 @@ The above command is used to connect the dashboard. Wait for Kubernetes-dashboar
 <li>Once the Kubernetes-dashboard-x container goes to the “Running” state, then we can initiate a kubectl proxy with the below-given command.If you want to start only in localhost then you can change the address option to the localhost.
 $ kubectl proxy --address=0.0.0.0</li>
 
-Now open the below Kubernetes dashboard URL in a browser.</br>
+Now open the below Kubernetes dashboard URL in a browser.</br></br>
 <strong>http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/.</strong></br>
 
 The given link will direct you to the Kubernetes dashboard. Here, to build a connection we need a token (key). And the key will be explained to you by the below commands.
