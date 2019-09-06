@@ -9,7 +9,7 @@
 ![1](https://user-images.githubusercontent.com/39157936/64402636-44875300-d093-11e9-87f5-1ef60965d0dd.png)  
 
 </br>
-The above command is used to connect the dashboard. Wait for Kubernetes-dashboard-x pods to goes “Running” status.</br>
+The above command is used to connect the dashboard. Wait for Kubernetes-dashboard-x pods to goes “Running” status.</br></br>
 
 <li>Once the Kubernetes-dashboard-x container goes to the “Running” state, then we can initiate a kubectl proxy with the below-given command.If you want to start only in localhost then you can change the address option to the localhost.
 $ kubectl proxy --address=0.0.0.0</li> </br> 
@@ -46,7 +46,7 @@ Now the password to login Kubernetes dashboard can be viewed by running the belo
 </br>
 
 
-After putting the above command we’ll attain a token key for the access of the Kubernetes dashboard.</br>
+After putting the above command we’ll attain a token key for the access of the Kubernetes dashboard.</br></br>
 <li>As mentioned in the below screenshot, that shows you to opt from those 2 options, i.e. Kubeconfig & Token. We prefer you to select token, and insert the key and proceed with the sign-in process.</li></br>  
 
 ![7](https://user-images.githubusercontent.com/39157936/64402644-45b88000-d093-11e9-92bf-4ebfc020d9e7.png)  
@@ -65,8 +65,7 @@ The current token can be the view from the master using the below command.</br><
 
 ![9](https://user-images.githubusercontent.com/39157936/64402646-46511680-d093-11e9-8b16-a8684ac22f7f.png)
   
-  </br></br>
-
+  </br>
 We have described flannel that is used for the communication process and after the flannel network is deployed, we can verify the flannel interface for the IP address assigned.</br>
 
 </ol>
