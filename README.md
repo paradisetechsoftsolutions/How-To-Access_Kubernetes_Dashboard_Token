@@ -1,7 +1,6 @@
 # How-To-Access_Kubernetes_Dashboard_Token    
 
-![Uploading 1_tGo2o41uJgvU9plJezMnPw.jpeg…]()
-
+![11](https://user-images.githubusercontent.com/39157936/64404548-ea3dc080-d099-11e9-98ef-6f85b99c2729.png)
 
   
 
