@@ -4,7 +4,10 @@
   
 <li>The dashboard provides an overview of the pods/clusters that runs on your machine. Moreover, it tells the creation and modification of individual Kubernetes resources, eg. deployments, jobs, etc. It provides accurate information on the state of Kubernetes resources in your cluster, and on any errors that may have occurred.</li></br>
 
-<strong>$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml</strong></br>
+<strong>$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml</strong></br>  
+
+![1](https://user-images.githubusercontent.com/39157936/64402636-44875300-d093-11e9-87f5-1ef60965d0dd.png)  
+
 
 The above command is used to connect the dashboard. Wait for Kubernetes-dashboard-x pods to goes “Running” status.</br>
 
@@ -14,12 +17,13 @@ $ kubectl proxy --address=0.0.0.0</li>
 Now open the below Kubernetes dashboard URL in a browser.</br></br>
 <strong>http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/.</strong></br>
 
-The given link will direct you to the Kubernetes dashboard. Here, to build a connection we need a token (key). And the key will be explained to you by the below commands.
+The given link will direct you to the Kubernetes dashboard. Here, to build a connection we need a token (key). And the key will be explained to you by the below commands.</br>
 
-To login properly into the Kubernetes dashboard, we need to create a service account and assign the proper role.
-$ kubectl create service account dashboard -n default
 
-$ kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard
+<li>To login properly into the Kubernetes dashboard, we need to create a service account and assign the proper role.</li>
+<strong>$ kubectl create service account dashboard -n default</strong>
+
+<strong>$ kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard</strong>
 
 Now the password to login Kubernetes dashboard can be viewed by running the below command. Copy the decoded password and login to the dashboard.
 $ kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
