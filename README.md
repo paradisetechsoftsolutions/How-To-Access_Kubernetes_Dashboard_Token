@@ -1,8 +1,10 @@
-# How-To-Access_Kubernetes_Dashboard_Token  
+# How-To-Access_Kubernetes_Dashboard_Token    
 
 ![Uploading 1_tGo2o41uJgvU9plJezMnPw.jpeg…]()
+
+
   
-  </br>
+
 ## Uses of Kubernetes Dashboard
 <ol>
   
