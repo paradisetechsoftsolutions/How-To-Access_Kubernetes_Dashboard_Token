@@ -8,11 +8,11 @@
 
 ![1](https://user-images.githubusercontent.com/39157936/64402636-44875300-d093-11e9-87f5-1ef60965d0dd.png)  
 
-
+</br>
 The above command is used to connect the dashboard. Wait for Kubernetes-dashboard-x pods to goes “Running” status.</br>
 
 <li>Once the Kubernetes-dashboard-x container goes to the “Running” state, then we can initiate a kubectl proxy with the below-given command.If you want to start only in localhost then you can change the address option to the localhost.
-$ kubectl proxy --address=0.0.0.0</li>  
+$ kubectl proxy --address=0.0.0.0</li> </br> 
 
 ![2](https://user-images.githubusercontent.com/39157936/64402638-451fe980-d093-11e9-89a8-6fbec046520f.png)  
 
@@ -24,14 +24,14 @@ The given link will direct you to the Kubernetes dashboard. Here, to build a con
 
 ![3](https://user-images.githubusercontent.com/39157936/64402639-451fe980-d093-11e9-963b-665c3f7bf099.png)  
 
-
+</br>
 
 <li>To login properly into the Kubernetes dashboard, we need to create a service account and assign the proper role.</li>
-<strong>$ kubectl create service account dashboard -n default</strong>  
+<strong>$ kubectl create service account dashboard -n default</strong></br>  
 
  ![4](https://user-images.githubusercontent.com/39157936/64402641-451fe980-d093-11e9-8a4e-9fb505b89903.png)  
  
-
+</br>
 <strong>$ kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard</strong></br>  
 
  ![5](https://user-images.githubusercontent.com/39157936/64402642-45b88000-d093-11e9-9c09-097540c6ae70.png)  
@@ -51,21 +51,21 @@ After putting the above command we’ll attain a token key for the access of the
 
 ![7](https://user-images.githubusercontent.com/39157936/64402644-45b88000-d093-11e9-92bf-4ebfc020d9e7.png)  
 
-
+</br>
 <li>After the sign-in, it will show you the dashboard main page. On that page, we can see the node’s running stage, replicas, clusters, etc. and every action that we perform on a created object. It helps us to visualize every action of master and node.</li></br>  
 
 ![8](https://user-images.githubusercontent.com/39157936/64402645-46511680-d093-11e9-9310-ec45a02a15c4.png)  
 
-
+</br>
 <li>Kubeadm token</br>
-Bootstrap tokens are used for establishing bidirectional trust between a node joining the cluster and a control-plane node. The token generated is valid only for 24hours. In that case, the 24 hours exceed we need to generate the new token using the command:</li>
-<strong>$ sudo kubeadm token create</strong></br>
-The current token can be the view from the master using the below command.</br>
+Bootstrap tokens are used for establishing bidirectional trust between a node joining the cluster and a control-plane node. The token generated is valid only for 24hours. In that case, the 24 hours exceed we need to generate the new token using the command:</li></br>
+<strong>$ sudo kubeadm token create</strong></br></br>
+The current token can be the view from the master using the below command.</br></br>
 <strong>$ sudo kubeadm token list</strong></br>  
 
 ![9](https://user-images.githubusercontent.com/39157936/64402646-46511680-d093-11e9-8b16-a8684ac22f7f.png)
   
-  </br>
+  </br></br>
 
 We have described flannel that is used for the communication process and after the flannel network is deployed, we can verify the flannel interface for the IP address assigned.</br>
 
