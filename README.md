@@ -37,7 +37,7 @@ The given link will direct you to the Kubernetes dashboard. Here, to build a con
  ![5](https://user-images.githubusercontent.com/39157936/64402642-45b88000-d093-11e9-9c09-097540c6ae70.png)  
  
 </br>
-Now the password to login Kubernetes dashboard can be viewed by running the below command. Copy the decoded password and login to the dashboard.</br>
+Now the password to login Kubernetes dashboard can be viewed by running the below command. Copy the decoded password and login to the dashboard.</br></br>
 
 <strong>$ kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode</strong></br>  
 
